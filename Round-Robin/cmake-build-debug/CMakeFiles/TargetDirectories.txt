@@ -1,3 +1,3 @@
-/home/vinicius/Documentos/untitled/cmake-build-debug/CMakeFiles/untitled.dir
-/home/vinicius/Documentos/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vinicius/Documentos/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Robin/cmake-build-debug/CMakeFiles/untitled.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Robin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Robin/cmake-build-debug/CMakeFiles/rebuild_cache.dir

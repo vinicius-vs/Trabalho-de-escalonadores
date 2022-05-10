@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/vinicius/Documentos/untitled/cmake-build-debug",
-		"source" : "/home/vinicius/Documentos/untitled"
+		"build" : "/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Robin/cmake-build-debug",
+		"source" : "/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Robin"
 	},
 	"version" : 
 	{

@@ -43,11 +43,11 @@ void schedule(struct filaAptos *fila) {
                                             : currentTask->burst; //caso o tempo necessário para executar a tesk seja maior que o limite de definido no QUANTUN e atributo o próprio QUANTUM na variável time caso ao contrário e definido o tempo necessário para a tesk
 
         run(currentTask, time); // executa a função run do processador
-        currentTask->burst = currentTask->burst - time;
+        currentTask->burst = currentTask->burst - time; // reduzindo o tempo necessário para realizar a tesk
 
-        delete(&fila->fila, currentTask);
-        if (currentTask->burst > 0) {
-            insert(&fila->fila, currentTask);
+        delete(&fila->fila, currentTask); // Deletar a task da posição atual
+        if (currentTask->burst > 0) { //verificar a necessidade da task entrar novamente na fila
+            insert(&fila->fila, currentTask); // inserindo novamente a task na fila
         }
     }
 }
