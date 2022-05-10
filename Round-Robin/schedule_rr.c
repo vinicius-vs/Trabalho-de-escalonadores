@@ -26,9 +26,6 @@ void add(char *name, int priority, int burst, struct filaAptos *fila) {
 
 // invoke the scheduler
 void schedule(struct filaAptos *fila) {
-
-    int c = 0;
-
     int time = 0; // variável utilizado para definir quanto tempo cada task irá utilizar
     struct node *nav; // variável utilizada para navegar na lista de tesks
     struct task *currentTask; // variável criada para gravar a tarefa atual
