@@ -39,8 +39,7 @@ void schedule(struct filaAptos *fila) {
             break;
         }
         currentTask = fila->fila->task; // pegando a task atual na fila
-        time = currentTask->burst > quantum ? quantum
-                                            : currentTask->burst; //caso o tempo necessário para executar a tesk seja maior que o limite de definido no QUANTUN e atributo o próprio QUANTUM na variável time caso ao contrário e definido o tempo necessário para a tesk
+        time = currentTask->burst > quantum ? quantum : currentTask->burst; //caso o tempo necessário para executar a tesk seja maior que o limite de definido no QUANTUN e atributo o próprio QUANTUM na variável time caso ao contrário e definido o tempo necessário para a tesk
 
         run(currentTask, time); // executa a função run do processador
         currentTask->burst = currentTask->burst - time; // reduzindo o tempo necessário para realizar a tesk
