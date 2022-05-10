@@ -14,12 +14,12 @@ void startFilaAptos(struct filaAptos *fila) {
 // add a task to the list 
 void add(char *name, int priority, int burst, struct filaAptos *fila) {
 
-    struct task *newTask = malloc(sizeof(struct task)); // criando uma nova tesk que irá receber os parâmetro
+    struct task *newTask = malloc(sizeof(struct task)); // criando uma nova task que irá receber os parâmetros
     newTask->name = name;
     newTask->priority = priority;
     newTask->burst = burst;
     newTask->tid = fila->lastId +
-                   1; // é pego a variável responsável por guardar o último id alocado na fila é adicionado mais 1 para adiciona o id da nova task
+                   1; // pega a variável responsável por guardar o último id alocado na fila, e adicionado mais 1 para adicionar o id da nova task
     insert(&fila->fila, newTask);// chama a função para alocar a task criada na fila
     fila->lastId++;
 }
@@ -29,8 +29,8 @@ void schedule(struct filaAptos *fila) {
 
     int c = 0;
 
-    int time = 0; // variável utilizado para definir quanto tempo cada task irá utilizar
-    struct node *nav; // variável utilizada para navegar na lista de tesks
+    int time = 0; // variável usada para definir quanto tempo cada task irá gastar
+    struct node *nav; // variável utilizada para navegar na lista de tasks
     struct task *currentTask; // variável criada para gravar a tarefa atual
 
     while (1) {
@@ -38,14 +38,15 @@ void schedule(struct filaAptos *fila) {
         {
             break;
         }
-        currentTask = fila->fila->task; // pegando a task atual na fila
-        time = currentTask->burst > quantum ? quantum : currentTask->burst; //caso o tempo necessário para executar a tesk seja maior que o limite de definido no QUANTUN e atributo o próprio QUANTUM na variável time caso ao contrário e definido o tempo necessário para a tesk
+        currentTask = fila->fila->task; // pega a task atual na fila
+        time = currentTask->burst > quantum ? quantum
+                                            : currentTask->burst; //caso o tempo necessário para executar a task seja maior que o limite é definido no QUANTUN e atributo o próprio QUANTUM na variável time, caso o contrário é definido o tempo necessário para a task
 
         run(currentTask, time); // executa a função run do processador
-        currentTask->burst = currentTask->burst - time; // reduzindo o tempo necessário para realizar a tesk
+        currentTask->burst = currentTask->burst - time; // reduz o tempo necessário para realização da task
 
-        delete(&fila->fila, currentTask); // Deletar a task da posição atual
-        if (currentTask->burst > 0) { //verificar a necessidade da task entrar novamente na fila
+        delete(&fila->fila, currentTask); // Deleta a task da posição atual
+        if (currentTask->burst > 0) { //verifica a necessidade da task, entra novamente na fila
             insert(&fila->fila, currentTask); // inserindo novamente a task na fila
         }
     }
