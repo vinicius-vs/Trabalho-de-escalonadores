@@ -1,0 +1,3 @@
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Shortest-Job First/cmake-build-debug/CMakeFiles/Shortest_Job_First.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Shortest-Job First/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Shortest-Job First/cmake-build-debug/CMakeFiles/rebuild_cache.dir

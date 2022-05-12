@@ -1,0 +1,9 @@
+# ninja log v5
+1	25	1652398237998265783	build.ninja	8884a29c7f4696fd
+1	26	1652398238028266059	CMakeFiles/Shortest_Job_First.dir/schedule_sfj.c.o	e6ec5c360bb18be3
+1	30	1652398238032266096	CMakeFiles/Shortest_Job_First.dir/CPU.c.o	87dae47e507eda13
+1	39	1652398238041266179	CMakeFiles/Shortest_Job_First.dir/driver.c.o	a7a4440be1de4dcd
+0	43	1652398238045266216	CMakeFiles/Shortest_Job_First.dir/list.c.o	db8c3c472bb8f368
+43	60	1652398238061266363	Shortest_Job_First	bc04877686609caf
+0	66	1652399193983046394	CMakeFiles/Shortest_Job_First.dir/list.c.o	db8c3c472bb8f368
+66	83	1652399193999046540	Shortest_Job_First	bc04877686609caf
