@@ -13,19 +13,32 @@
 
 // add a new task to the list of tasks
 void insert(struct node **head, Task *newTask) {
-    struct  node * newNode = malloc(sizeof(struct node));
-    newNode->task = newTask;
+    struct  node * newNode = malloc(sizeof(struct node)); // crie um novo espaço na memoria
+    newNode->task = newTask; //Adicionado a nova tesk no espaço de memória
     newNode->next = NULL;
 
-    if(*head == NULL){
+    if(*head == NULL){ // verifica se a lista está vazia
         *head = newNode;
-    } else {
+    } else{
         struct node * nav;
         nav = *head;
-        while (nav->next != NULL){
-            nav = nav->next;
+
+        if(nav->task->burst > newNode->task->burst) // verifica se a task localizada na primeira posição da fila já não tem um tempo necessário de execução maior que a task a ser adicionada
+        {
+            newNode->next = nav;
+            *head = newNode;
+        } else{
+
+            while (nav->next != NULL){ // percorre a lista até o final
+                if(nav->next->task->burst > newNode->task->burst)// verifica se a task da próxima posição não tem um tempo necessário para execução maior que a nova task 
+                {
+                    newNode->next = nav->next;
+                    break;
+                }
+                nav = nav->next;
+            }
+            nav->next = newNode;
         }
-        nav->next = newNode;
     }
 }
 

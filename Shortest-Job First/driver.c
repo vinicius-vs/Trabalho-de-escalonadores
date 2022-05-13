@@ -10,9 +10,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "task.h"
 #include "list.h"
 #include "schedule_sjf.h"
+#include <malloc.h>
 
 #define SIZE    100
 
@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     int priority;
     int burst;
 
+    struct filaAptos * fila = malloc(sizeof(struct filaAptos)); // criando a fila para armazenar as tasks
+
     in = fopen(argv[1],"r");
     
     while (fgets(task,SIZE,in) != NULL) {
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
         burst = atoi(strsep(&temp,","));
 
         // add the task to the scheduler's list of tasks
-        add(name,priority,burst);
+        add(name,priority,burst,fila);
 
         free(temp);
     }
@@ -43,7 +45,7 @@ int main(int argc, char *argv[])
     fclose(in);
 
     // invoke the scheduler
-    schedule();
+    schedule(fila);
 
     return 0;
 }
