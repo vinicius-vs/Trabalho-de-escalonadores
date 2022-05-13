@@ -11,3 +11,7 @@
 1	29	1652403570314851296	CMakeFiles/Shortest_Job_First.dir/schedule_sfj.c.o	e6ec5c360bb18be3
 0	36	1652403570321851358	CMakeFiles/Shortest_Job_First.dir/list.c.o	db8c3c472bb8f368
 36	56	1652403570341851537	Shortest_Job_First	bc04877686609caf
+0	25	1652405675941873909	CMakeFiles/Shortest_Job_First.dir/CPU.c.o	87dae47e507eda13
+0	29	1652405675945873945	CMakeFiles/Shortest_Job_First.dir/list.c.o	db8c3c472bb8f368
+0	18	1652405990697726139	CMakeFiles/Shortest_Job_First.dir/schedule_sfj.c.o	e6ec5c360bb18be3
+18	40	1652405990718726330	Shortest_Job_First	bc04877686609caf

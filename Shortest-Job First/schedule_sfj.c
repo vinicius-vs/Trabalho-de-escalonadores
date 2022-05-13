@@ -1,6 +1,7 @@
 #include "schedule_sjf.h"
 #include "list.h"
 #include "task.h"
+#include "CPU.h"
 #include <malloc.h>
 
 // add a task to the list 
@@ -17,5 +18,14 @@ void add(char *name, int priority, int burst, struct filaAptos * fila){
 
 // invoke the scheduler
 void schedule(struct filaAptos * fila){
-   int x = 0;
+   struct task * currentTask;
+
+    while (1){
+        if (&fila->fila->task == NULL){ // verifica se a lista está vazia.
+            break;
+        }
+        currentTask = fila->fila->task; // pega a primeira task da fila
+        run(currentTask, currentTask->burst); // executa a função run da biblioteca CPU.h
+        delete(fila,currentTask); // deleta a task já executado da lista
+    }
 }

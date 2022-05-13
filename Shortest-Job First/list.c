@@ -30,7 +30,7 @@ void insert(struct node **head, Task *newTask) {
         } else{
 
             while (nav->next != NULL){ // percorre a lista até o final
-                if(nav->next->task->burst > newNode->task->burst)// verifica se a task da próxima posição não tem um tempo necessário para execução maior que a nova task 
+                if(nav->next->task->burst > newNode->task->burst)// verifica se a task da próxima posição não tem um tempo necessário para execução maior que a nova task
                 {
                     newNode->next = nav->next;
                     break;
