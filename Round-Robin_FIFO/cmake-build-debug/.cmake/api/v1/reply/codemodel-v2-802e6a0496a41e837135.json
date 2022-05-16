@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Round_Rubi_FIFO",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Round_Rubi_FIFO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Round_Rubi_FIFO-Debug-5a485f4917dfb7ef739e.json",
+					"name" : "Round_Rubi_FIFO",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Rubi_FIFO/cmake-build-debug",
+		"source" : "/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Rubi_FIFO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

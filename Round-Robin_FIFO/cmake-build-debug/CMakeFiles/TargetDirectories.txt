@@ -1,0 +1,3 @@
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Rubi_FIFO/cmake-build-debug/CMakeFiles/Round_Rubi_FIFO.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Rubi_FIFO/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vinicius/Documentos/GitHub/Trabalho-de-escalonadores/Round-Rubi_FIFO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
